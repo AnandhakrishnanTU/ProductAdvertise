@@ -85,12 +85,16 @@ function submit(){
     const message = document.querySelector('.message');
     const sendmessage = document.querySelector('.send-message');
 
-    name.value='';
-    email.value='';
-    message.value='';
-    sendmessage.style.visibility='visible';
+    if (name.value === '' || email.value === '' || message.value === '') {
+        alert("Please provide all details !")
+    } else {
+        name.value = '';
+        email.value = '';
+        message.value = '';
+        sendmessage.style.visibility = 'visible';
 
-    setTimeout(() => {
-        sendmessage.style.visibility='hidden';
-    }, 2000);
+        setTimeout(() => {
+            sendmessage.style.visibility = 'hidden';
+        }, 2000);
+    }
 }
